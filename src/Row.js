@@ -23,8 +23,8 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
         {movies &&
           movies.map(
             (movie) =>
-              (isLargeRow && movie.poster__path) ||
-              (!isLargeRow && movie.backdrop_path && (
+              ((isLargeRow && movie.poster__path) ||
+                (!isLargeRow && movie.backdrop_path)) && (
                 <img
                   className={`row__poster ${isLargeRow && 'row__posterLarge'}`}
                   key={movie.id}
@@ -33,7 +33,7 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
                   }`}
                   alt={movie.name}
                 />
-              ))
+              )
           )}
       </div>
     </div>
