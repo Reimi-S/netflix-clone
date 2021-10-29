@@ -10,12 +10,8 @@
   padding: 20px;
 }
 
-.row__posters::--webkit-scrollbar {
+.row__posters::-webkit-scrollbar {
   display: none;
-}
-
-.row__posters::--webkit-scrollbar {
-  display: hide;
 }
 
 .row__poster {
